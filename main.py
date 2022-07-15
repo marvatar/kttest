@@ -13,7 +13,7 @@ st.set_page_config(
 #------------------------------------------------
 @st.cache
 def get_data():
-    tmpDAT = pd.read_excel(Path.cwd() / "tobeweighted.xlsx")
+    tmpDAT = pd.read_excel("tobeweighted.xlsx")
     
     return tmpDAT
 
