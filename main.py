@@ -15,8 +15,7 @@ st.set_page_config(
 #------------------------------------------------
 @st.cache
 def get_data():
-    tmpDAT = pd.read_excel("tobeweighted.xlsx")
-    st.balloons()    
+    tmpDAT = pd.read_excel("tobeweighted.xlsx")  
     return tmpDAT
 
 def make_hist_fig(tmp_df, tmp_var):
