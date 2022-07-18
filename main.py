@@ -41,14 +41,21 @@ df = get_data()
 
 # ---------------------------------------------------------
 with st.sidebar:
+
+    option_y = st.selectbox(
+        label="Liste der Fragen",
+        options=df.columns,
+    )
+    st.write(f"Auswahl: {option_y}")
+
+    components.html("""<hr style="height:2px;border:none;color:#cbcbcb;background-color:#cbcbcb;" /> """)
+
     option_x = st.selectbox(
-        "Merkmalsauswahl",
-        ("sex", "age", "state")
+        label="Merkmalsauswahl",
+        options=("sex", "age", "state"),
     )
     st.write(f"Auswahl: {option_x}")
 
-
-#
     components.html("""<hr style="height:2px;border:none;color:#cbcbcb;background-color:#cbcbcb;" /> """)
 
     values = st.slider(
@@ -57,8 +64,7 @@ with st.sidebar:
         max_value=99, 
         value=(25, 75),
         step=1,
-        )
-
+    )
     st.write(f"Alter von {values[0]} bis {values[1]}")
 
 # ---------------------------------------------------------
