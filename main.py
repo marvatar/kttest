@@ -25,14 +25,14 @@ def make_hist_fig(tmp_df, tmp_var):
                         text_auto=True,
     )
     xfig.update_layout(bargap=0.2)
-    st.balloons() 
+#    st.balloons() 
     return xfig
 
 st.title("Markus' DEMO")
 
-data_load_state = st.text('Loading data...')
+#data_load_state = st.text('Loading data...')
 df = get_data()
-data_load_state.text("Done! (using st.cache)")
+#data_load_state.text("Done! (using st.cache)")
 
 with st.sidebar:
     option_x = st.selectbox(
